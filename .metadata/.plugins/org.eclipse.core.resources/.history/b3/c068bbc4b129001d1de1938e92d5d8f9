@@ -1,0 +1,17 @@
+/*
+ ============================================================================
+ Name        : ejercicio3-4.c
+ Author      : Ahuitz Caraccciolo
+ Version     :
+ Copyright   : Your copyright notice
+ Description : ejercicio3-4.c
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout, NULL);
+	return 0;
+}

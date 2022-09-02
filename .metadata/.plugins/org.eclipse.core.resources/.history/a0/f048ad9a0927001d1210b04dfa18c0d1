@@ -1,0 +1,17 @@
+/*
+ ============================================================================
+ Name        : ejercicio2-2.c
+ Author      : Ahuitz CAracciolo
+ Version     :
+ Copyright   : Your copyright notice
+ Description : ejercicio 2-2
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+
+	return 0;
+}

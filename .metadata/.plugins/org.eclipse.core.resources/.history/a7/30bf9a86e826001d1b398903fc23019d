@@ -1,0 +1,28 @@
+/*
+ ============================================================================
+ Name        : ejercicio1.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int numero1;
+	int numero2;
+	int resultadoSuma;
+
+	printf("ingrese un numero");
+	scanf("%d", &numero1);
+	printf("ingrese un numero");
+	scanf("%d", &numero2);
+
+	resultadoSuma = numero1 + numero2;
+
+	printf("el resultado es: %d", resultadoSuma);
+	return 0;
+}

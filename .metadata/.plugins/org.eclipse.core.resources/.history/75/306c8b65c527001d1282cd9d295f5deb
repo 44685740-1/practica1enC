@@ -1,0 +1,18 @@
+/*
+ ============================================================================
+ Name        : ejercicio2-4.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : ejercicio2-4
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+
+
+	return 0;
+}

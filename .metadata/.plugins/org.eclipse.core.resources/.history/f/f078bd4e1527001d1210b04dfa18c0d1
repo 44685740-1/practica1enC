@@ -1,0 +1,42 @@
+/*
+ ============================================================================
+ Name        : ejercicio2-2.c
+ Author      : Ahuitz Caracciolo
+ Version     :
+ Copyright   : Your copyright notice
+ Description : ejercicio 2-2
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int numero;
+	int i;
+	int contadorPares;
+	int contadorImpar;
+	int maximoPar;
+
+	//inicializar
+	contadorPares = 0;
+	contadorImpar = 0;
+	maximoPar = 0; //inicializo en false
+
+	for(i=0; i<10;i++){
+		printf(i);
+		if(numero % 2 == 0){
+			contadorPares++;
+			if(i==0){
+				maximoPar = numero;
+			} else{
+				if(numero>maximoPar){
+					numero = maximoPar;
+				}
+			}
+		} else{
+			contadorImpar++;
+		}
+	}
+	return 0;
+}

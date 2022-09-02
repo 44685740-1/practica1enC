@@ -1,0 +1,31 @@
+/*
+ ============================================================================
+ Name        : ejercicio2-4.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : ejercicio2-4
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	//variables
+	char deseaContinuar;
+	int contadorPasajeros;
+
+	//inicializar
+	deseaContinuar  = 's';
+
+	while(deseaContinuar == 's' && contadorPasajeros <= 3){
+		contadorPasajeros++;
+		printf("desea continuar (s/n) \n");
+		scanf("%c", &deseaContinuar);
+
+	}
+	return 0;
+}

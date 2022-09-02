@@ -1,0 +1,21 @@
+/*
+ ============================================================================
+ Name        : ejercicio3-1.c
+ Author      : Ahuitz Caracciolo
+ Version     :
+ Copyright   : Your copyright notice
+ Description : ejercicio3-1
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	return 0;
+}
+
+
+

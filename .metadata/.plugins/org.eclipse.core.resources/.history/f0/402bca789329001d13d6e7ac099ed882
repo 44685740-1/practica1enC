@@ -1,0 +1,25 @@
+/*
+ ============================================================================
+ Name        : ejercicio3-1.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout, NULL);
+	int parametro;
+	printf("ingrese el parametro que quiere que se imprima");
+	scanf("%d", parametro);
+
+	return 0;
+}
+
+int MostrarParametro(parametro){
+
+}

@@ -1,0 +1,69 @@
+/*
+ ============================================================================
+ Name        : ejercicio2-3.c
+ Author      : Ahuitz Caracciolo
+ Version     :
+ Copyright   : Your copyright notice
+ Description : ejercicio2-3
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout,NULL);
+	//variables
+	int numeroDeCliente;
+	int edad;
+	int temperaturaCorporal;
+	char estadoCivil;
+	char genero;
+	int precioPorPasajero;
+	int contadorPasajeros;
+
+	//inicializar
+	precioPorPasajero = 600;
+	contadorPasajeros = 0;
+
+	while(contadorPasajeros <= 100){
+		printf("ingrese su numero de cliente");
+		scanf("%d", &numeroDeCliente);
+		printf("ingrese su estado civil s para soltero c para casado o v viudo");
+		scanf("%c", &estadoCivil);//c de char
+		switch(estadoCivil){
+			case "s":
+				estadoCivil = "s";
+				break;
+			case "c":
+				estadoCivil = "c";
+				break;
+			case "v":
+				estadoCivil = "v";
+				break;
+		}
+
+		do{
+			printf("ingrese su edad");
+			scanf("%d", &edad);
+		} while(edad <= 17);
+
+		do{
+			printf("ingrese su temperatura corporal");
+			scanf("%d", &temperaturaCorporal);
+		} while(temperaturaCorporal <= 0);
+
+		printf("ingrese su genero f para femenino m para masculino y o para no binario");
+		scanf("c%", &genero);//c de char
+
+		switch(){
+			case "f":
+				genero = "f";
+				break;
+			case "m":
+				genero = "m";
+				break;
+		}
+
+	return 0;
+}

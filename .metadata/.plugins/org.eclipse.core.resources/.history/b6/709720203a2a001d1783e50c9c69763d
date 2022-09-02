@@ -1,0 +1,28 @@
+/*
+ ============================================================================
+ Name        : sabados27-08.c
+ Author      : Ahuitz Caracciolo
+ Version     :
+ Copyright   : Your copyright notice
+ Description : sabados27-08.c
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout, NULL);
+	int importe;
+	char paisDeOrigen;
+	int i;
+	for(i=0;i<3;i++){
+
+	}
+	printf("ingrese el importe");
+	scanf("%d", &importe);
+	printf("ingres el pais de origen");
+	fflush(stdin);
+	scanf("%c", &paisDeOrigen);
+	return 0;
+}
