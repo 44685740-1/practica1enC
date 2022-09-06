@@ -10,66 +10,67 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
 int main(void) {
-	setbuf(stdout,NULL);
-	int numero;
+	setbuf(stdout, NULL);
 	int i;
-	int contadorPares;
+	int numero;
+	int contadorPar;
 	int contadorImpar;
-	int maximoPar;
-	int numeroMenor;
+	int mayorPar;
+	int menorNumero;
 	int acumuladorPositivos;
-	int acumuladorProductoNegativo;
-
-
-
-
+	int acumuladorProdcutoNegativos;
 	//inicializar
-	contadorPares = 0;
 	contadorImpar = 0;
+	contadorPar = 0;
 	acumuladorPositivos = 0;
-	acumuladorProductoNegativo = 0;
+	acumuladorProdcutoNegativos = 1;//muy importante inicializar en 1 para hacer el acumulador de multipplicacio *=
 
 
-	for(i=0; i<3;i++){
-		printf("ingrese un numero \n");
+	for (i = 0; i < 3; i++) {
+		printf("ingrese un numero entero que no sea 0\n");
+		fflush(stdin);
 		scanf("%d", &numero);
-		if(numero % 2 == 0){
-			contadorPares++;
-			if(i==0){
-				maximoPar = numero;
-			} else{
-				if(numero>maximoPar){
-					maximoPar = numero;
+		//if par o impar
+		if (numero % 2 == 0) {
+			contadorPar++;
+			if (i == 1) {
+				mayorPar = numero;
+			} else {
+				if (numero > mayorPar) {
+					mayorPar = numero;
 				}
 			}
-		} else{
+		} else {
 			contadorImpar++;
 		}
 
-		if(i==0){
-			numeroMenor = numero;
+		//if bandera menor numero
+		if(i == 1){
+			menorNumero = numero;
 		} else{
-			if(numero < numeroMenor){
-				numero = numeroMenor;
+			if(numero < menorNumero){
+				menorNumero = numero;
 			}
 		}
 
-		if(numero >= 0){
-			acumuladorPositivos = acumuladorPositivos + numero;
-		} else{
+		//if suma positivos
+		if(numero > 0){
+			acumuladorPositivos += numero;
+		}
 
-
+		//if producto de los negativos
+		if(numero < 0){
+			acumuladorProdcutoNegativos *= numero;
 		}
 	}
 
-	printf("la cantidad de numero pares es de: %d \n", contadorPares);
-	printf("la cantidad de numeros impares es de: %d \n", contadorImpar);
-	printf("el menor numero ingresado es: %d \n", numeroMenor);
-	printf("el mayor de los numeros pares es: %d \n", maximoPar);
-	printf("la suma de los positivos es de: %d \n", acumuladorPositivos);
-	printf("el producto de los numeros negativos es de: %d ", acumuladorProductoNegativo);
 
+	printf("la cantidad de impares es de: %d", contadorImpar);
+	printf("la cantidad de pares es de: %d", contadorPar);
+	printf("el menor numero ingresado es: %d", menorNumero);
+	printf("el mayor de los numeros pares es: %d", mayorPar);
+	printf("la suma de los positivos es de: %d", acumuladorPositivos);
+	printf("el producto de los negativos es: %d", acumuladorProdcutoNegativos);
 	return 0;
 }
