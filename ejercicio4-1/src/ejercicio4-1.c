@@ -15,7 +15,6 @@ int main(void) {
 	setbuf(stdout, NULL);
 	int numero;
 	int retornoValidacionPositivo;
-	int i;
 	int acumulador;
 	//inicializar
 	acumulador = 1;//importante inicializarlo en 1
@@ -24,7 +23,7 @@ int main(void) {
 	scanf("%d", &numero);
 	retornoValidacionPositivo = validacionNumeroPositivo(numero);
 	if(retornoValidacionPositivo == 0){
-		for(i = numero; numero > 0; numero--){
+		for(int i = numero; numero > 0; numero--){
 			acumulador *= numero;
 			printf("%d *", numero);
 		}

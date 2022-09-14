@@ -25,7 +25,7 @@ int main(void) {
 	printf("indique c/f si va a ingresar temperatura en celcius y fahrenheit");
 	scanf("%c", &tipoTemperatura);
 
-	if (tipoTemperatura == 'c') {
+	if (tipoTemperatura ==  'c') {
 		printf("ingrese la temperatura en celcius");
 		scanf("%d", &temperatura);
 		retornoValidacionCelcius = validacionCelcius(temperatura);
