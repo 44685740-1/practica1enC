@@ -1,1 +1,7 @@
-Info: Nothing to build for funcionSumarDosEnteros
+02:14:29 **** Rebuild of configuration Debug for project funcionSumarDosEnteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionSumarDosEnteros.o" "..\\src\\funcionSumarDosEnteros.c" 
+gcc -o funcionSumarDosEnteros.exe "src\\funcionSumarDosEnteros.o" 
+
+02:14:30 Build Finished. 0 errors, 0 warnings. (took 542ms)
+
