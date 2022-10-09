@@ -10,15 +10,15 @@
 #include "cargarMostrarPromedio.h"
 
 
-void inicializarjugador(jugador unJugador){
+jugador inicializarjugador(jugador unJugador){
 	unJugador.goles = -1;
 	unJugador.partidos = -1;
 	unJugador.promedio = -1;
-	for(int i = 0; i < sizeof(unJugador.nombre); i++){
-		unJugador.nombre[i] = 'a';
-	}
+	strcpy(unJugador.nombre, "hola");
+	return unJugador;
+
 }
-void cargarJugador(jugador unJugador){
+jugador cargarJugador(jugador unJugador){
 	printf("ingrese el nombre del jugador\n");
 	fgets(unJugador.nombre, sizeof(unJugador.nombre), stdin);
 	unJugador.nombre[strlen(unJugador.nombre)-1]='\n';
@@ -27,6 +27,9 @@ void cargarJugador(jugador unJugador){
 	scanf("%d", &unJugador.goles);
 	printf("ingrese la cantidad de partidos que jugo\n");
 	scanf("%d", &unJugador.partidos);
+
+
+	return unJugador;
 }
 
 
@@ -40,6 +43,6 @@ void mostrarJugador(jugador unJugador){
 
 void calcularPromedioJugador(jugador unJugador){
 	unJugador.promedio = (float)unJugador.goles / unJugador.partidos;
-	printf("el promedio de goles es %f", unJugador.promedio);
+	printf("el promedio de goles es %.2f", unJugador.promedio);
 }
 

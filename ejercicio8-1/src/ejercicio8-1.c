@@ -16,11 +16,17 @@
 
 int main(void) {
 	setbuf(stdout, NULL);
+	//hecho con retorno
+	//se puede hacer con punteros tambien
+
 	jugador unJugador;
-	inicializarjugador(unJugador);
-	cargarJugador(unJugador);
-	mostrarJugador(unJugador);
-	calcularPromedioJugador(unJugador);
+	jugador retornoInicializar;
+	jugador retornoCarga;
+
+	retornoInicializar =  inicializarjugador(unJugador);
+	retornoCarga = cargarJugador(unJugador);
+	mostrarJugador(retornoCarga);
+	calcularPromedioJugador(retornoCarga);
 
 	return 0;
 }

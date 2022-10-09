@@ -1,1 +1,36 @@
-Info: Nothing to build for ejercicio2-3
+19:43:03 **** Rebuild of configuration Debug for project ejercicio2-3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ejercicio2-3.o" "..\\src\\ejercicio2-3.c" 
+..\src\ejercicio2-3.c: In function 'main':
+..\src\ejercicio2-3.c:60:16: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    estadoCivil = "soltero";
+                ^
+..\src\ejercicio2-3.c:63:16: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    estadoCivil = "casado";
+                ^
+..\src\ejercicio2-3.c:66:16: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    estadoCivil = "viudo";
+                ^
+..\src\ejercicio2-3.c:81:11: warning: spurious trailing '%' in format [-Wformat=]
+   scanf("c%", &genero); //c de char
+           ^
+..\src\ejercicio2-3.c:81:9: warning: too many arguments for format [-Wformat-extra-args]
+   scanf("c%", &genero); //c de char
+         ^~~~
+..\src\ejercicio2-3.c:86:11: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    genero = "femenino";
+           ^
+..\src\ejercicio2-3.c:87:19: warning: comparison between pointer and integer
+    if(estadoCivil == "soltero"){
+                   ^~
+..\src\ejercicio2-3.c:87:19: warning: comparison with string literal results in unspecified behavior [-Waddress]
+..\src\ejercicio2-3.c:101:11: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    genero = "masculino";
+           ^
+..\src\ejercicio2-3.c:104:11: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    genero = "no binario";
+           ^
+gcc -o ejercicio2-3.exe "src\\ejercicio2-3.o" 
+
+19:43:04 Build Finished. 0 errors, 10 warnings. (took 569ms)
+

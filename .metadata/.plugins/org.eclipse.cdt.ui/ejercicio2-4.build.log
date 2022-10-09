@@ -1,1 +1,14 @@
-Info: Nothing to build for ejercicio2-4
+19:43:04 **** Rebuild of configuration Debug for project ejercicio2-4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ejercicio2-4.o" "..\\src\\ejercicio2-4.c" 
+..\src\ejercicio2-4.c: In function 'main':
+..\src\ejercicio2-4.c:25:11: warning: spurious trailing '%' in format [-Wformat=]
+   scanf("c%", &caraccter);//c de caraccter
+           ^
+..\src\ejercicio2-4.c:25:9: warning: too many arguments for format [-Wformat-extra-args]
+   scanf("c%", &caraccter);//c de caraccter
+         ^~~~
+gcc -o ejercicio2-4.exe "src\\ejercicio2-4.o" 
+
+19:43:04 Build Finished. 0 errors, 2 warnings. (took 517ms)
+

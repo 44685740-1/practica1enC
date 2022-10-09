@@ -20,14 +20,18 @@ int main(void) {
 	printf("ingrese su nombre\n");
 	fflush(stdin);
 	fgets(nombre,20,stdin);
+	nombre[strlen(nombre)-1]='\n';
+	nombre[strlen(nombre)-1]='\0';
 	printf("%s", nombre);
 	printf("ingrese su apellido\n");
 	fflush(stdin);
 	fgets(apellido,20,stdin);
+	apellido[strlen(apellido)-1]='\n';
+	apellido[strlen(apellido)-1]='\0';
 	printf("%s", apellido);
 	strcat(apellido, coma);
 	strcpy(nombreYapellido, apellido);
 	strcat(nombreYapellido, nombre);
-	printf("%s", nombreYapellido);
+	printf("\n%s", nombreYapellido);
 	return 0;
 }

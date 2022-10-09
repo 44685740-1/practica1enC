@@ -1,6 +1,5 @@
-21:43:32 **** Incremental Build of configuration Debug for project ejercicio8-2 ****
+02:18:29 **** Rebuild of configuration Debug for project ejemploSetyGet ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ejercicio8-2.o" "..\\src\\ejercicio8-2.c" 
-gcc -o ejercicio8-2.exe "src\\ejercicio8-2.o" "src\\validaciones.o" 
-Info: Nothing to build for ejercicio8-2
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ejemploSetyGet.o" "..\\src\\ejemploSetyGet.c" 
+gcc -o ejemploSetyGet.exe "src\\ejemploSetyGet.o" 
+Info: Nothing to build for ejemploSetyGet

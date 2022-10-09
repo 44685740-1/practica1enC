@@ -13,8 +13,8 @@ typedef struct{
 	int partidos;
 	float promedio;
 }jugador;
-void inicializarjugador(jugador unJugador);
-void cargarJugador(jugador unJugador);
+jugador inicializarjugador(jugador unJugador);
+jugador cargarJugador(jugador unJugador);
 void mostrarJugador(jugador unJugador);
 void calcularPromedioJugador(jugador unJugador);
 
