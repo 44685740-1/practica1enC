@@ -38,5 +38,13 @@ int apple_Baja(productoApple productosApple[], int TAM);
 productoApple eGen_ModificarUno(productoApple prodcuctosApple);
 int apple_Modificacion(productoApple productosApple[], int TAM);
 
+//ordenamiento precio
+int apple_SortPrecio(productoApple productosApple[], int TAM, int criterio);
+//imprimis llamando a mostrar todos
+
+//ordenamiento descripcion
+int apple_SortDescripcion(productoApple productosApple[], int TAM, int criterio);
+//imprimis llamando a mostrar todos
+
 
 #endif /* ENTIDADAPPLE_H_ */

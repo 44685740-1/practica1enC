@@ -58,7 +58,10 @@ productoApple apple_CargarDatos(void) {
 	/** CARGAR DATOS NECESARIOS PARA EL ALTA*/
 	/** IMPORTANTE - NO CARGAR ID NI ESTADO - SE HACE EN EL ALTA */
 	fflush(stdin);
-	utn_getAlfaNumeric(auxiliar.descripcion, "\ningrese la descripcion del prodcuto apple\n", "ERROR", 0);
+	printf("\ningrese la decripcion\n");
+	scanf("%s", auxiliar.descripcion);
+	fflush(stdin);
+	//utn_getAlfaNumeric(auxiliar.descripcion, "\ningrese la descripcion del prodcuto apple\n", "ERROR", 0);
 	utn_getNumero(&auxiliar.nacionalidad, "\ningrese la nacionalidad del prodcuto 1. EEUU - 2. CHINA - 3. OTRO", "ERROR", 1, 3, 1);
 	utn_getNumero(&auxiliar.tipo, "\n ingrese el tipo del producto 1. IPHONE 2. -MAC 3. - IPAD 4. - ACCESORIOS", "ERROR", 1, 4, 1);
 	utn_getNumero(&auxiliar.precio, "\ningrese le precio del producto\n", "ERROR", 0, 10000, 1);
@@ -266,3 +269,128 @@ int apple_Modificacion(productoApple productosApple[], int TAM) {
 	return rtn;
 }
 
+//ordenado por precio
+
+int apple_SortPrecio(productoApple productosApple[], int TAM, int criterio) {
+	int rtn = 0;
+	int i;
+	int j;
+	productoApple aux;
+
+	/** EJEMPLO DE SORT CON ID DE Gen
+	    MODIFICAR "CRITERIO DE ORDENAMIENTO" PARA OTROS CASOS DE ORDENAMIENTO
+	    CASE -1 -> MENOR A MAYOR (ASCENDENTE)
+	    CASE  1 -> MAYOR A MENOR (DESCENDENTE)
+	    UTILIZAR strcmp(...) PARA COMPARAR CADENAS
+	*/
+
+	//SI EXISTE EL ARRAY Y EL LIMITE ES VALIDO
+	if (productosApple != NULL && TAM > 0) {
+		switch (criterio) {
+		case -1:
+			for (i = 0; i < TAM - 1; i++) {
+				for (j = i + 1; j < TAM; j++) {
+					//PREGUNTO POR ESTADO "OCUPADO" DE AMBOS
+					if (productosApple[i].isEmpty == OCUPADO
+							&& productosApple[j].isEmpty == OCUPADO) {
+						//CRITERIO DE ORDENAMIENTO
+						if (productosApple[i].precio > productosApple[j].precio) {
+							//INTERCAMBIO POSICIONES EN ARRAY
+							aux = productosApple[i];
+							productosApple[i] = productosApple[j];
+							productosApple[j] = aux;
+						}
+					}
+				}
+			}
+			rtn = 1;
+			break;
+		case 1:
+			for (i = 0; i < TAM - 1; i++) {
+				for (j = i + 1; j < TAM; j++) {
+					//PREGUNTO POR ESTADO "OCUPADO" DE AMBOS
+					if (productosApple[i].isEmpty == OCUPADO
+							&& productosApple[j].isEmpty == OCUPADO) {
+						//CRITERIO DE ORDENAMIENTO
+						if (productosApple[i].precio < productosApple[j].precio) {
+							//INTERCAMBIO POSICIONES EN ARRAY
+							aux = productosApple[i];
+							productosApple[i] = productosApple[j];
+							productosApple[j] = aux;
+						}
+					}
+				}
+			}
+			rtn = 1;
+			break;
+		default:
+			//CRITERIO DE ORDENAMIENTO MAL INGRESADO
+			rtn = 0;
+			break;
+		}
+	}
+	return rtn;
+}
+
+//ordenamiento descripcion
+
+int apple_SortDescripcion(productoApple productosApple[], int TAM, int criterio) {
+	int rtn = 0;
+	int i;
+	int j;
+	productoApple aux;
+
+	/** EJEMPLO DE SORT CON ID DE Gen
+	    MODIFICAR "CRITERIO DE ORDENAMIENTO" PARA OTROS CASOS DE ORDENAMIENTO
+	    CASE -1 -> MENOR A MAYOR (ASCENDENTE)
+	    CASE  1 -> MAYOR A MENOR (DESCENDENTE)
+	    UTILIZAR strcmp(...) PARA COMPARAR CADENAS
+	*/
+
+	//SI EXISTE EL ARRAY Y EL LIMITE ES VALIDO
+	if (productosApple != NULL && TAM > 0) {
+		switch (criterio) {
+		case -1:
+			for (i = 0; i < TAM - 1; i++) {
+				for (j = i + 1; j < TAM; j++) {
+					//PREGUNTO POR ESTADO "OCUPADO" DE AMBOS
+					if (productosApple[i].isEmpty == OCUPADO
+							&& productosApple[j].isEmpty == OCUPADO) {
+						//CRITERIO DE ORDENAMIENTO
+						if (productosApple[i].descripcion[0] > productosApple[j].descripcion[0]) {
+							//INTERCAMBIO POSICIONES EN ARRAY
+							aux = productosApple[i];
+							productosApple[i] = productosApple[j];
+							productosApple[j] = aux;
+						}
+					}
+				}
+			}
+			rtn = 1;
+			break;
+		case 1:
+			for (i = 0; i < TAM - 1; i++) {
+				for (j = i + 1; j < TAM; j++) {
+					//PREGUNTO POR ESTADO "OCUPADO" DE AMBOS
+					if (productosApple[i].isEmpty == OCUPADO
+							&& productosApple[j].isEmpty == OCUPADO) {
+						//CRITERIO DE ORDENAMIENTO
+						if (productosApple[i].descripcion[0] < productosApple[j].descripcion[0]) {
+							//INTERCAMBIO POSICIONES EN ARRAY
+							aux = productosApple[i];
+							productosApple[i] = productosApple[j];
+							productosApple[j] = aux;
+						}
+					}
+				}
+			}
+			rtn = 1;
+			break;
+		default:
+			//CRITERIO DE ORDENAMIENTO MAL INGRESADO
+			rtn = 0;
+			break;
+		}
+	}
+	return rtn;
+}

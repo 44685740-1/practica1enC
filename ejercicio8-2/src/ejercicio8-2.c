@@ -21,6 +21,9 @@ int main(void) {
 	int retornoOpcionMain;
 	int resultadoOpcionMain;
 
+	//inicializo apple
+	apple_Inicializar(prodcutosApple, TAM);
+
 	do{
 		printf(" 1. ALTA \n 2. BAJA \n 3. MODIFICACION  \n 4. LISTADO \n 5. LISTADO ORDENADO PRECIO \n 6. LISTADO ORDENADO DESCRIPCION \n 7. SALIR");
 
@@ -30,7 +33,6 @@ int main(void) {
 
 		switch(resultadoOpcionMain){
 		case 1:
-			apple_Inicializar(prodcutosApple, TAM);
 			apple_Alta(prodcutosApple, TAM);
 			break;
 		case 2:
@@ -43,10 +45,12 @@ int main(void) {
 			apple_MostrarTodos(prodcutosApple, TAM);
 			break;
 		case 5:
-			printf("5");
+			apple_SortPrecio(prodcutosApple, TAM, 1);
+			apple_MostrarTodos(prodcutosApple, TAM);
 			break;
 		case 6:
-			printf("6");
+			apple_SortDescripcion(prodcutosApple, TAM, 1);
+			apple_MostrarTodos(prodcutosApple, TAM);
 			break;
 		case 7:
 			printf("saliste");

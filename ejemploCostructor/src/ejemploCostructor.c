@@ -21,6 +21,7 @@ typedef struct
 int mostrarEmpleado(eEmpleado* pUnEmpleado);
 eEmpleado* newEmpleado();
 eEmpleado* newEmpleadoParam(int legajo, char* nombre, char sexo, float sueldo);
+
 int main(void) {
 	//puntero a una estrcutura usando memoria dinamica
 	eEmpleado* pEmpl;
